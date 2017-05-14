@@ -38,7 +38,7 @@ client.on('message', message => {
   // Actual role part
   // First we match for everything that follows after a !
   let match = /!([a-zA-Z0-9_ ]*)/g.exec(message.content)
-  if (match) {
+  if (match && Object.keys(roles).includes(match[1])) {
     // If it's matched, let's check if a role with this name exists
     let role = message.guild.roles.find("name", match[1])
 
