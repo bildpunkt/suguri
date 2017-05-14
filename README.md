@@ -3,6 +3,8 @@
 Suguri is a bot for [Discord](https://discordapp.com) which enables Server admins to quickly create a set of roles. Users
 then can use the role names to (de)assign these roles to themselves.
 
+**NOTE:** These roles are only for visual sake, as they have no special permissions assigned to them. They inherit the default permission set.
+
 _Basically my excuse to learn how to write Discord bots._
 
 ## Usage
