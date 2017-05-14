@@ -45,7 +45,7 @@ All commands are prefixed with a `!`
 
 * `setup` creates all of the roles specified in `roles.json`  
   _Example:_ `!setup`
-* `rolename` adds `rolename` tp the user sending it, requires the role to exist beforehand, so be sure to run `!setup`. Running the same command again will remove the specified role from the user.  
+* `rolename` adds `rolename` to the user sending it, requires the role to exist beforehand, so be sure to run `!setup`. Running the same command again will remove the specified role from the user.  
   _Example:_ `!Cool Kids`
 
 ## License
