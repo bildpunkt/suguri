@@ -12,6 +12,8 @@ client.on('message', message => {
   // Ignore everything that doesn't start with !
   if (!message.content.startsWith("!")) return false;
 
+  if (message.channel.name !== config.channel) return false;
+
   // Setup command, creates all roles from config
   // Also checks if roles already exist and skips those
   if (message.content.includes('setup')) {

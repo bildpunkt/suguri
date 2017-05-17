@@ -18,6 +18,7 @@ _Basically my excuse to learn how to write Discord bots._
 
 * Copy `config.example.json` to `config.json`
 * Replace `YOUR_TOKEN_HERE` with your bot user token in `config.json`
+* Replace `channel-name` with the name of a channel the bot will listen for commands in
 
 #### Roles
 
