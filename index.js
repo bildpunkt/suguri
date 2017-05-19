@@ -12,7 +12,7 @@ client.on('message', message => {
   // Ignore everything that doesn't start with !
   if (!message.content.startsWith("!")) return false;
 
-  if (message.channel.name !== config.channel) return false;
+  if (config.channel.includes(message.channel.name)) return false;
 
   // Setup command, creates all roles from config
   // Also checks if roles already exist and skips those
@@ -23,7 +23,7 @@ client.on('message', message => {
       let roleArr = Object.keys(roles);
 
       roleArr.forEach(function (role) {
-        if (message.guild.roles.find("name", role) != null) return true;
+        if (message.guild.roles.find("name", role) != null) return false;
 
         message.guild.createRole({
           name: role,
@@ -32,8 +32,28 @@ client.on('message', message => {
 
       })
 
+      if (message.guild.roles.find("name", "Ready for Match") != null) return false;
+
+      message.guild.createRole({
+        name: "Ready for Match",
+        hoist: true,
+        mentionable: true
+      }).catch(console.error)
+
     } else {
       message.reply('insufficient permissions')
+    }
+  }
+
+  if (message.content.includes('ready')) {
+    let rdyRole = message.guild.roles.find("name", "Ready for Match")
+
+    if (rdyRole !== null) {
+      if (message.member.roles.find("name", "Ready for Match")) {
+        message.member.removeRole(rdyRole)
+      } else {
+        message.member.addRole(rdyRole)
+      }
     }
   }
 

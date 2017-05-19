@@ -1,7 +1,6 @@
 # suguri
 
-Suguri is a bot for [Discord](https://discordapp.com) which enables Server admins to quickly create a set of roles. Users
-then can use the role names to (de)assign these roles to themselves.
+Suguri is a bot specifically written for the [Discord](https://discordapp.com) server [100% Pure Orange Juice](https://discord.gg/JXDx6Mg) which enables the Server admins to quickly create a set of roles. Users then can use the role names to (de)assign these roles to themselves.
 
 **NOTE:** These roles are only for visual sake, as they have no special permissions assigned to them. They inherit the default permission set.
 
@@ -50,6 +49,7 @@ All commands are prefixed with a `!`
   _Example:_ `!setup`
 * `rolename` adds `rolename` to the user sending it, requires the role to exist beforehand, so be sure to run `!setup`. Running the same command again will remove the specified role from the user.  
   _Example:_ `!Cool Kids`
+* `ready` adds or removes the `Ready for Match` role from yourself, which is mentionable and hoisted, so you can quickly talk to users that are ready to play!
 
 ## License
 
